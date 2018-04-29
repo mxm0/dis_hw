@@ -54,8 +54,7 @@ object Main extends App {
   def db2_connect(): java.sql.Connection = {
     // initialize JDBC driver & connection pool
     Class.forName("com.ibm.db2.jcc.DB2Driver")
-    //ConnectionPool.singleton("jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP", "vsisp01", "aqMRJ4VO")
-    var connection = java.sql.DriverManager.getConnection("jdbc:db2://localhost:50000/VSISP", "maxinn", "qw4vMkQ:)wDL6pKq")
+    ConnectionPool.singleton("jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP", "vsisp01", "aqMRJ4VO")
        
     connection
   }
