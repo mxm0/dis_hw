@@ -1,3 +1,5 @@
+import scalikejdbc._
+
 object Main extends App {
   var input = 0 
   val pwd = "toor"
@@ -56,6 +58,17 @@ object Main extends App {
   }
 
   def db2_connect() = {
+    // initialize JDBC driver & connection pool
+    Class.forName("com.ibm.db2.jcc.DB2Driver")
+    ConnectionPool.singleton("jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP", "vsisp01", "aqMRJ4VO")
+    // SELECT TEST 
+    DB autoCommit { implicit session =>
+    sql"select * from estate_agent".foreach { rs =>
+      println("Emp("+rs.int("id")+","+rs.string("name")+")")
+      }
+    }
     
+    // ad-hoc session provider on the REP
+    implicit val session = AutoSession    
   }
 }
