@@ -24,3 +24,24 @@ assembly
 exit
 ~run
 exit
+~run
+exit
+~run
+exit
+~run
+import org.mindrot.jbcrypt.BCrypt
+~run
+exit
+~run
+exit
+~run
+exit
+~run
+exit
+~run
+exit
+~run
+exit
+~run
+exit
+~run

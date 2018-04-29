@@ -23,14 +23,16 @@ version := "1.0"
 
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
+
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.1"
 
-// Scala 2.10, 2.11, 2.12
+/* Scala 2.10, 2.11, 2.12
 libraryDependencies ++= Seq(
   "org.scalikejdbc" %% "scalikejdbc"       % "3.2.2",
   "com.h2database"  %  "h2"                % "1.4.197",
-  "ch.qos.logback"  %  "logback-classic"   % "1.2.3"
-)
+  "ch.qos.logback"  %  "logback-classic"   % "1.2.3",
+)*/
+libraryDependencies += "com.github.t3hnar" %% "scala-bcrypt" % "3.1"
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the cats dependency to the set of dependencies that sbt will go
 // and fetch when it starts up.
