@@ -68,7 +68,7 @@ object Main extends App {
       }
     }
     
-    // ad-hoc session provider on the REP
+    // ad-hoc session provider on the RE
     implicit val session = AutoSession    
   }
 }

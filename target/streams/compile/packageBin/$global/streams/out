@@ -1,1 +1,23 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/dis_hw_2.12-1.0.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/dis_hw_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	contractManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/contractManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	estateManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/estateManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	estateManagement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/estateManagement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	agentManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/agentManagement$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	contractManagement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/contractManagement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Person.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/Person.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	agentManagement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes/agentManagement.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

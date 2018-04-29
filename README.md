@@ -1,10 +1,14 @@
 # dis_hw
-- [x] CL UI
-- [ ] GUI
-- [ ] DB2 Connection
-- [ ] Handle estate agents account
+- [ ] GUI ?
 - [ ] Login system for agents
-- [ ] Handle estates
+- [ ] Manage estates
 - [ ] Insert persons
 - [ ] Create contracts
 - [ ] Show all contracts
+
+# Work in progress
+- [ ] Manage estate agents account
+
+# Completed
+- [x] CL UI
+- [x] DB2 Connection
