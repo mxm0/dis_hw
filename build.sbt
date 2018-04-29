@@ -12,7 +12,7 @@ scalaVersion := "2.12.4"
 
 // It's possible to define many kinds of settings, such as:
 
-name := "hello-world"
+name := "dis_hw"
 organization := "ch.epfl.scala"
 version := "1.0"
 
