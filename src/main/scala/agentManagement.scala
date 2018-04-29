@@ -31,6 +31,9 @@ object agentManagement {
   def deleteAccount() = {
   }
   
+  def hashPwd() = {
+  }
+
   def showOptions() = {
     print("\033[H\033[2J")
     print("AGENT MANAGEMENT MODE")
