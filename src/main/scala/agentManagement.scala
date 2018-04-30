@@ -1,12 +1,9 @@
-import com.github.t3hnar.bcrypt._
-import java.sql.{ResultSet, SQLException}
-
 object agentManagement {
-
+  var msg = ""
+  
   def manageAgents() = {
     
     var input = 0
-    var msg = ""
 
     while(input != 4){
       showMainOptions(msg)
@@ -39,7 +36,7 @@ object agentManagement {
         case 3 =>
           val login = readLine("Insert login username: ")
           var estateAgent = new EstateAgent("", "", login, "")
-          estateAgent.deleteAccount()
+          estateAgent.delete()
           msg = "Account deleted"
         
         case 4 => print("\033[H\033[2J")
@@ -54,38 +51,42 @@ object agentManagement {
   def editAccount(login: String) = {
    var estateAgent = new EstateAgent("", "", login, "")
    estateAgent = estateAgent.pullAccount()
-   var input = 0  
-   while(input !=4){
-     showEditOptions()
-     println("\nName: " + estateAgent.Name + "\nAddress: " + estateAgent.Address + "\nLogin: " + estateAgent.Login + "\n") 
-     var arg = readLine()
-     input = Main.toInt(arg)
-     input match {
-       case 1 =>
-         var new_name = readLine("Insert new name: ")
-         estateAgent.Name = new_name
-         estateAgent.changeName()
+   if(!estateAgent.Name.isEmpty){
+     var input = 0  
+     while(input !=4){
+       showEditOptions()
+       println("\nName: " + estateAgent.Name + "\nAddress: " + estateAgent.Address + "\nLogin: " + estateAgent.Login + "\n") 
+       var arg = readLine()
+       input = Main.toInt(arg)
+       input match {
+         case 1 =>
+           var new_name = readLine("Insert new name: ")
+           estateAgent.Name = new_name
+           estateAgent.save()
 
-       case 2 =>
-         var new_address = readLine("Insert new address: ")
-         estateAgent.Address = new_address
-         estateAgent.changeAddress()
+         case 2 =>
+           var new_address = readLine("Insert new address: ")
+           estateAgent.Address = new_address
+           estateAgent.save()
 
-       case 3 =>
-         val standardIn = System.console()
-         println("Insert new password: ")
-         var new_pwd = standardIn.readPassword()
-         estateAgent.changePwd()
-         
-       case 4 =>
-         print("\033[H\033[2J")
+         case 3 =>
+           val standardIn = System.console()
+           println("Insert new password: ")
+           var new_pwd = standardIn.readPassword()
+           estateAgent.save()
+           
+         case 4 =>
+           print("\033[H\033[2J")
 
-       case whoa => 
-            print("\033[H\033[2J")
-            println("Chosen action is not listed\n")
+         case whoa => 
+              print("\033[H\033[2J")
+              println("Chosen action is not listed\n")
 
+       }
      }
-   }
+    }else{
+      msg = "Account is not in database"
+    }
   }
 
   def validateInput(name: String, address: String, login: String, pwd:String): Boolean = {
@@ -105,7 +106,8 @@ object agentManagement {
             |2- Edit account
             |3- Delete account
             |4- Exit""".stripMargin)
-    println("\n" + msg + "\n")
+    if(!msg.isEmpty)
+      println("\n" + msg + "\n")
   }
 
   def showEditOptions() = {
