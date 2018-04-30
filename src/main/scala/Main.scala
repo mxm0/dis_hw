@@ -1,3 +1,5 @@
+import java.sql.{Connection, ResultSet, SQLException}
+
 object Main extends App {
   var input = 0 
   val pwd = "toor"
@@ -15,7 +17,7 @@ object Main extends App {
            |1- Manage estate agents
            |2- Manage estates
            |3- Manage contracts
-           |4- Exit""".stripMargin)
+           |4- Quit""".stripMargin)
     
     
     var arg = readLine()
@@ -34,7 +36,7 @@ object Main extends App {
              err = true 
            }
          case 2 => 
-           //estateManagement.manageEstates()
+           estateManagement.manageEstates()
          case 3 => contractManagement.manageContracts()
          case 4 => println("Quitting app...")
          case whoa =>  
@@ -54,7 +56,7 @@ object Main extends App {
   def db2_connect(): java.sql.Connection = {
     // initialize JDBC driver & connection pool
     Class.forName("com.ibm.db2.jcc.DB2Driver")
-    var connection = java.sql.DriverManager.getConnection("jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP", "vsisp01", "aqMRJ4VO") 
-    connection
+      var connection = java.sql.DriverManager.getConnection("jdbc:db2://localhost:50000/VSISP", "maxinn", "qw4vMkQ:)wDL6pKq") 
+      connection
   }
 }
