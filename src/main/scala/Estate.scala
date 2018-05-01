@@ -1,7 +1,6 @@
-package model
+package db2
 
 import java.sql.{SQLException, Statement}
-import db2.ConnectionManager
 
 class Estate {
 
@@ -30,6 +29,76 @@ class Estate {
                                           s"street=${_street}, street_number=${_street_number}, " +
                                           s"square_area=${_square_area})"
 
+
+  def load(id: Int): Estate = {
+    try {
+      val db2 = new ConnectionManager
+      val selectSQL = "SELECT * FROM estate WHERE id = ?"
+      val stmt = db2.conn.prepareStatement(selectSQL)
+      stmt.setInt(1, id)
+      val rs = stmt.executeQuery
+      if (rs.next) {
+        _id = id
+        _city = rs.getString("city")
+        _postalcode = rs.getString("postalcode")
+        _street = rs.getString("street")
+        _street_number = rs.getString("street_number")
+        _square_area = rs.getString("square_area")
+        rs.close()
+        stmt.close()
+        return this
+      }
+    } catch {
+      case e: SQLException =>
+        e.printStackTrace()
+    }
+    null
+  }
+
+  def save(): Unit = {
+    try {
+      val db2 = new ConnectionManager
+      if (_id == -1) {
+        val query = """
+                    |INSERT INTO estate
+                    | (city, postalcode, street, street_number,square_area)
+                    | VALUES (?, ?, ?, ?, ?)
+                    """
+        val pstmt = db2.conn.prepareStatement(query.stripMargin, Statement.RETURN_GENERATED_KEYS)
+        pstmt.setString(1, _city)
+        pstmt.setString(2, _postalcode)
+        pstmt.setString(3, _street)
+        pstmt.setString(4, _street_number)
+        pstmt.setString(5, _square_area)
+        pstmt.executeUpdate
+
+        val rs = pstmt.getGeneratedKeys
+        if (rs.next) _id = rs.getInt(1)
+        rs.close()
+        pstmt.close()
+      }
+      else {
+        val updateSQL = """
+                        |UPDATE estate
+                        |SET city = ?, postalcode = ?, street = ?, street_number = ?, square_area = ?
+                        |WHERE id = ?
+                        """
+        val pstmt = db2.conn.prepareStatement(updateSQL.stripMargin)
+        pstmt.setString(1, _city)
+        pstmt.setString(2, _postalcode)
+        pstmt.setString(3, _street)
+        pstmt.setString(4, _street_number)
+        pstmt.setString(5, _square_area)
+        pstmt.setInt(6, _id)
+        pstmt.executeUpdate
+        pstmt.close()
+      }
+    }
+    catch {
+      case e: SQLException =>
+        e.printStackTrace()
+    }
+  }
   /*
   estate_id_ = apt_res.getInt("estate_id")
   val query = """
@@ -45,12 +114,5 @@ class Estate {
 
   val rs = stmt.executeQuery
   */
-
- /*
-  main entry point for creating properties
-  incorporates both apt and houses.
-
-  joins estate tables apt/house talbes
- */
 
 }
