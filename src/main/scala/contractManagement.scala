@@ -37,7 +37,7 @@ object contractManagement {
           showEstates()
           // let user choose which estate to buy/sell
           var chosen_id = 0
-          if(estate_house_id.values.exists(_ == None) || estate_app_id.values.exists(_ == None)){
+          if(!estate_house_id.isEmpty || !estate_app_id.isEmpty){
             if(!validatePersonInput(first_name, name, address)){
               // Check if person is in the database otherwise create new person
               p = p.pull(first_name, name)
