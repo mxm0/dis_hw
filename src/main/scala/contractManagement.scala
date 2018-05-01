@@ -1,3 +1,5 @@
+package db2
+
 object contractManagement {
   var input = 0
 

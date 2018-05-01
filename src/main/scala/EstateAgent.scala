@@ -1,3 +1,5 @@
+package db2
+
 import java.sql.{ResultSet, SQLException}
 import com.github.t3hnar.bcrypt._
 
@@ -5,9 +7,9 @@ class EstateAgent (var Name: String, var Address: String, var Login: String, var
 
   def createAccount() = {
     val hashedPwd = Pwd.bcrypt(generateSalt) // encrypt pwd
-    val conn: java.sql.Connection = Main.db2_connect()
+    val db2 = new ConnectionManager()
     try{
-      var pst = conn.prepareStatement("insert into estate_agent (name, address, login, password) values(?, ?, ?, ?)")
+      var pst = db2.conn.prepareStatement("insert into estate_agent (name, address, login, password) values(?, ?, ?, ?)")
       pst.setString (1, Name)
       pst.setString (2, Address)
       pst.setString (3, Login)
@@ -19,15 +21,15 @@ class EstateAgent (var Name: String, var Address: String, var Login: String, var
           println(e.getMessage)
         }
     } finally {
-      conn.close()
+      db2.conn.close()
     }
   }
 
 
   def delete() = {
-    val conn: java.sql.Connection = Main.db2_connect()
+    val db2 = new ConnectionManager()
     try{
-      var pst = conn.prepareStatement("delete from estate_agent where ? = login")
+      var pst = db2.conn.prepareStatement("delete from estate_agent where ? = login")
       pst.setString (1, Login)
       pst.executeUpdate()
       pst.close()
@@ -36,14 +38,14 @@ class EstateAgent (var Name: String, var Address: String, var Login: String, var
           println(e.getMessage)
         }
     } finally {
-      conn.close()
+      db2.conn.close()
     }
   }
 
   def save() = {
-    val conn: java.sql.Connection = Main.db2_connect()
+    val db2 = new ConnectionManager()
     try{
-      var pst = conn.prepareStatement("update estate_agent set name = ?, address = ?, password  = ? where login = ?")
+      var pst = db2.conn.prepareStatement("update estate_agent set name = ?, address = ?, password  = ? where login = ?")
       val hashedPwd = Pwd.bcrypt(generateSalt) // encrypt pwd
       pst.setString (1, Name)
       pst.setString (2, Address)
@@ -56,14 +58,14 @@ class EstateAgent (var Name: String, var Address: String, var Login: String, var
           println(e.getMessage)
         }
     } finally {
-      conn.close()
+      db2.conn.close()
     }
   }
 
   def pullAccount(): EstateAgent = {
-    val conn: java.sql.Connection = Main.db2_connect()
+    val db2 = new ConnectionManager()
     try{
-      var pst = conn.prepareStatement("select name, address, login from estate_agent where login = ?")
+      var pst = db2.conn.prepareStatement("select name, address, login from estate_agent where login = ?")
       pst.setString (1, Login)
       var rs = pst.executeQuery()
       if(rs.next()){
@@ -77,7 +79,7 @@ class EstateAgent (var Name: String, var Address: String, var Login: String, var
           println(e.getMessage)
         }
     } finally {
-      conn.close()
+      db2.conn.close()
     }
     this
   }

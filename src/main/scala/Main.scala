@@ -1,3 +1,5 @@
+package db2
+
 import java.sql.{Connection, ResultSet, SQLException}
 
 object Main extends App {

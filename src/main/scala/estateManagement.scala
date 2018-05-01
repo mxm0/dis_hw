@@ -1,3 +1,5 @@
+package db2
+
 object estateManagement {
   var input = 0
 
