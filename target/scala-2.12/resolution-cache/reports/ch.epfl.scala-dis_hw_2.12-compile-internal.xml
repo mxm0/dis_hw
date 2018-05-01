@@ -7,154 +7,28 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180429043359"/>
+		date="20180429215557"/>
 	<dependencies>
-		<module organisation="org.scalikejdbc" name="scalikejdbc_2.12">
-			<revision name="3.2.2" status="release" pubdate="20180325142202" resolver="public" artresolver="public" homepage="http://scalikejdbc.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="6">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3190" time="121" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc_2.12/ivy-3.2.2.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc_2.12/ivy-3.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc_2.12/3.2.2/scalikejdbc_2.12-3.2.2.pom"/>
-				<caller organisation="ch.epfl.scala" name="dis_hw_2.12" conf="compile-internal, compile, provided, optional" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="1.0"/>
+		<module organisation="com.github.t3hnar" name="scala-bcrypt_2.12">
+			<revision name="3.1" status="release" pubdate="20170613201312" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/t3hnar/scala-bcrypt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2974" time="0" location="/Users/maxinn/.ivy2/cache/com.github.t3hnar/scala-bcrypt_2.12/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/t3hnar/scala-bcrypt_2.12/3.1/scala-bcrypt_2.12-3.1.pom"/>
+				<caller organisation="ch.epfl.scala" name="dis_hw_2.12" conf="compile-internal, compile, provided, optional" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scalikejdbc_2.12" type="jar" ext="jar" status="successful" details="" size="8678" time="456" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc_2.12/jars/scalikejdbc_2.12-3.2.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc_2.12/3.2.2/scalikejdbc_2.12-3.2.2.jar"/>
+					<artifact name="scala-bcrypt_2.12" type="jar" ext="jar" status="no" details="" size="7566" time="0" location="/Users/maxinn/.ivy2/cache/com.github.t3hnar/scala-bcrypt_2.12/jars/scala-bcrypt_2.12-3.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/t3hnar/scala-bcrypt_2.12/3.1/scala-bcrypt_2.12-3.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.scalikejdbc" name="scalikejdbc-interpolation_2.12">
-			<revision name="3.2.2" status="release" pubdate="20180325142124" resolver="public" artresolver="public" homepage="http://scalikejdbc.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4862" time="104" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation_2.12/ivy-3.2.2.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation_2.12/ivy-3.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation_2.12/3.2.2/scalikejdbc-interpolation_2.12-3.2.2.pom"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc_2.12" conf="default, compile, runtime, master" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="3.2.2"/>
+		<module organisation="de.svenkubiak" name="jBCrypt">
+			<revision name="0.4.1" status="release" pubdate="20160110080505" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mindrot.org/projects/jBCrypt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="ISC/BSD licence" url="http://www.mindrot.org/files/jBCrypt/LICENSE"/>
+				<metadata-artifact status="no" details="" size="3557" time="0" location="/Users/maxinn/.ivy2/cache/de.svenkubiak/jBCrypt/ivy-0.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/de/svenkubiak/jBCrypt/0.4.1/jBCrypt-0.4.1.pom"/>
+				<caller organisation="com.github.t3hnar" name="scala-bcrypt_2.12" conf="default, compile, runtime, master" rev="0.4.1" rev-constraint-default="0.4.1" rev-constraint-dynamic="0.4.1" callerrev="3.1"/>
 				<artifacts>
-					<artifact name="scalikejdbc-interpolation_2.12" type="jar" ext="jar" status="successful" details="" size="196263" time="577" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation_2.12/jars/scalikejdbc-interpolation_2.12-3.2.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation_2.12/3.2.2/scalikejdbc-interpolation_2.12-3.2.2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scalikejdbc" name="scalikejdbc-interpolation-macro_2.12">
-			<revision name="3.2.2" status="release" pubdate="20180325142100" resolver="public" artresolver="public" homepage="http://scalikejdbc.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3250" time="120" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation-macro_2.12/ivy-3.2.2.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation-macro_2.12/ivy-3.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation-macro_2.12/3.2.2/scalikejdbc-interpolation-macro_2.12-3.2.2.pom"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation_2.12" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="3.2.2"/>
-				<artifacts>
-					<artifact name="scalikejdbc-interpolation-macro_2.12" type="jar" ext="jar" status="successful" details="" size="7995" time="445" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation-macro_2.12/jars/scalikejdbc-interpolation-macro_2.12-3.2.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation-macro_2.12/3.2.2/scalikejdbc-interpolation-macro_2.12-3.2.2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scalikejdbc" name="scalikejdbc-core_2.12">
-			<revision name="3.2.2" status="release" pubdate="20180325141925" resolver="public" artresolver="public" homepage="http://scalikejdbc.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="5654" time="107" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-core_2.12/ivy-3.2.2.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-core_2.12/ivy-3.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-core_2.12/3.2.2/scalikejdbc-core_2.12-3.2.2.pom"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation_2.12" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="3.2.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation-macro_2.12" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="3.2.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc_2.12" conf="default, compile, runtime, master" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="3.2.2"/>
-				<artifacts>
-					<artifact name="scalikejdbc-core_2.12" type="jar" ext="jar" status="successful" details="" size="1749387" time="848" location="/Users/maxinn/.ivy2/cache/org.scalikejdbc/scalikejdbc-core_2.12/jars/scalikejdbc-core_2.12-3.2.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-core_2.12/3.2.2/scalikejdbc-core_2.12-3.2.2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.h2database" name="h2">
-			<revision name="1.4.197" status="release" pubdate="20180318212844" resolver="public" artresolver="public" homepage="http://www.h2database.com" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="15">
-				<license name="MPL 2.0 or EPL 1.0" url="http://h2database.com/html/license.html"/>
-				<metadata-artifact status="successful" details="" size="960" time="101" location="/Users/maxinn/.ivy2/cache/com.h2database/h2/ivy-1.4.197.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/com.h2database/h2/ivy-1.4.197.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/h2database/h2/1.4.197/h2-1.4.197.pom"/>
-				<caller organisation="ch.epfl.scala" name="dis_hw_2.12" conf="compile-internal, compile, provided, optional" rev="1.4.197" rev-constraint-default="1.4.197" rev-constraint-dynamic="1.4.197" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="h2" type="jar" ext="jar" status="successful" details="" size="1927540" time="976" location="/Users/maxinn/.ivy2/cache/com.h2database/h2/jars/h2-1.4.197.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/h2database/h2/1.4.197/h2-1.4.197.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12">
-			<revision name="1.1.0" status="release" pubdate="20180201221040" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
-				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="successful" details="" size="2191" time="101" location="/Users/maxinn/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/ivy-1.1.0.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/ivy-1.1.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.0/scala-parser-combinators_2.12-1.1.0.pom"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-core_2.12" conf="compile, runtime" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="3.2.2"/>
-				<artifacts>
-					<artifact name="scala-parser-combinators_2.12" type="bundle" ext="jar" status="successful" details="" size="225042" time="583" location="/Users/maxinn/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.1.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.0/scala-parser-combinators_2.12-1.1.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="ch.qos.logback" name="logback-classic">
-			<revision name="1.2.3" status="release" pubdate="20170331212753" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="16">
-				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="successful" details="" size="13081" time="105" location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-classic/ivy-1.2.3.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-classic/ivy-1.2.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.pom"/>
-				<caller organisation="ch.epfl.scala" name="dis_hw_2.12" conf="compile-internal, compile, provided, optional" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="logback-classic" type="jar" ext="jar" status="successful" details="" size="290339" time="605" location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.2.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="ch.qos.logback" name="logback-core">
-			<revision name="1.2.3" status="release" pubdate="20170331212715" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
-				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="successful" details="" size="4196" time="98" location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-core/ivy-1.2.3.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-core/ivy-1.2.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.pom"/>
-				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="1.2.3"/>
-				<artifacts>
-					<artifact name="logback-core" type="jar" ext="jar" status="successful" details="" size="471901" time="659" location="/Users/maxinn/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.2.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316123632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
-				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5188" time="0" location="/Users/maxinn/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="file:////Users/maxinn/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/ivys/ivy.xml"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-core_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.2.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.2.2"/>
-				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.2.3"/>
-				<artifacts>
-					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="/Users/maxinn/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
-						<origin-location is-local="false" location="file:////Users/maxinn/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/jars/slf4j-api.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.commons" name="commons-dbcp2">
-			<revision name="2.2.0" status="release" pubdate="20171221183539" resolver="public" artresolver="public" homepage="http://commons.apache.org/dbcp/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
-				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="14274" time="121" location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-dbcp2/ivy-2.2.0.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-dbcp2/ivy-2.2.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-dbcp2/2.2.0/commons-dbcp2-2.2.0.pom"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-core_2.12" conf="compile, runtime" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="3.2.2"/>
-				<artifacts>
-					<artifact name="commons-dbcp2" type="jar" ext="jar" status="successful" details="" size="186655" time="578" location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-dbcp2/jars/commons-dbcp2-2.2.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-dbcp2/2.2.0/commons-dbcp2-2.2.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.2" status="release" pubdate="20140705201228" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="19206" time="125" location="/Users/maxinn/.ivy2/cache/commons-logging/commons-logging/ivy-1.2.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/commons-logging/commons-logging/ivy-1.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom"/>
-				<caller organisation="org.apache.commons" name="commons-dbcp2" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.2.0"/>
-				<artifacts>
-					<artifact name="commons-logging" type="jar" ext="jar" status="successful" details="" size="61829" time="495" location="/Users/maxinn/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.commons" name="commons-pool2">
-			<revision name="2.5.0" status="release" pubdate="20171216203945" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-pool/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
-				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="12463" time="107" location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-pool2/ivy-2.5.0.xml" searched="true" original-local-location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-pool2/ivy-2.5.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.5.0/commons-pool2-2.5.0.pom"/>
-				<caller organisation="org.apache.commons" name="commons-dbcp2" conf="compile, runtime" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="2.2.0"/>
-				<artifacts>
-					<artifact name="commons-pool2" type="jar" ext="jar" status="successful" details="" size="128217" time="501" location="/Users/maxinn/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.5.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.5.0/commons-pool2-2.5.0.jar"/>
+					<artifact name="jBCrypt" type="bundle" ext="jar" status="no" details="" size="17570" time="0" location="/Users/maxinn/.ivy2/cache/de.svenkubiak/jBCrypt/bundles/jBCrypt-0.4.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/de/svenkubiak/jBCrypt/0.4.1/jBCrypt-0.4.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -164,7 +38,6 @@
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2812" time="0" location="/Users/maxinn/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:////Users/maxinn/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/ivys/ivy.xml"/>
 				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.6.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation-macro_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.2"/>
 				<artifacts>
 					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3587892" time="0" location="/Users/maxinn/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.4.jar">
 						<origin-location is-local="false" location="file:////Users/maxinn/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/jars/scala-reflect.jar"/>
@@ -228,14 +101,10 @@
 				<caller organisation="ch.epfl.scala" name="dis_hw_2.12" conf="compile-internal, compile, provided, optional" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.12.4"/>
 				<caller organisation="org.typelevel" name="cats-core_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-core_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.2"/>
 				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
-				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.1.0"/>
+				<caller organisation="com.github.t3hnar" name="scala-bcrypt_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.1"/>
 				<caller organisation="org.typelevel" name="cats-kernel_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.6.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc-interpolation-macro_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.2"/>
-				<caller organisation="org.scalikejdbc" name="scalikejdbc_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="3.2.2"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5247152" time="0" location="/Users/maxinn/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.4.jar">
 						<origin-location is-local="false" location="file:////Users/maxinn/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/jars/scala-library.jar"/>
