@@ -1,5 +1,5 @@
 package db2
-import java.sql.{ResultSet, SQLException}
+import java.sql.{ResultSet, SQLException, Date}
 
 object contractHelper {
   def showSellContracts() = {
@@ -43,6 +43,62 @@ object contractHelper {
       while(rs.next()){
         println("Contract no: " + rs.getInt(5) + ", First name: " + rs.getString(1) + ", House location: " + rs.getString(2) + ", ZIP:" + rs.getString(3) + ", Rent: " + rs.getString(4) + ", Start data: " + rs.getString(6) + ", Duration: " + rs.getString(7))
       }
+    }
+  }
+  
+  def createRentContract(personId: Int, app_id: Int, place: String, StartDate: Date, Duration: String, AdditionalCosts: String) = {
+    // Make new contract
+    var date = new java.sql.Date(new java.util.Date().getTime());
+    var contract = new Contract(0, date, place)
+    contract.save()
+
+    // Make new tenancy contract
+    var tenancy_contract = new TenancyContract(0, StartDate, Duration, AdditionalCosts, contract.Id)
+    tenancy_contract.save()
+
+    // Save new contract in rent
+    val db2 = new ConnectionManager()
+      try{
+      var pst = db2.conn.prepareStatement("INSERT INTO RENTS(tenancy_contract_id, appartment_id, person_id) values(?, ?, ?)")
+      pst.setInt (1, tenancy_contract.Id)
+      pst.setInt (2, app_id)
+      pst.setInt (3, personId)
+      pst.executeUpdate()
+      pst.close()
+     } catch {
+        case e: SQLException => {
+          println(e.getMessage)
+        }
+    } finally {
+     db2.conn.close()
+    }
+  }
+
+  def createSellContract(personId: Int, house_id: Int, place: String, Installment: Int, InterestRate: String) = {
+    // Make new contract
+    var date = new java.sql.Date(new java.util.Date().getTime());
+    var contract = new Contract(0, date, place)
+    contract.save()
+
+    // Make new tenancy contract
+    var purchase_contract = new PurchaseContract(0, Installment, InterestRate, contract.Id)
+    purchase_contract.save()
+
+    // Save new contract in rent
+    val db2 = new ConnectionManager()
+      try{
+      var pst = db2.conn.prepareStatement("INSERT INTO SELLS(purchase_contract_id, house_id, person_id) values(?, ?, ?)")
+      pst.setInt (1, purchase_contract.Id)
+      pst.setInt (2, house_id)
+      pst.setInt (3, personId)
+      pst.executeUpdate()
+      pst.close()
+     } catch {
+        case e: SQLException => {
+          println(e.getMessage)
+        }
+    } finally {
+     db2.conn.close()
     }
   }
 

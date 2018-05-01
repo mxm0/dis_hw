@@ -21,7 +21,7 @@ CREATE TABLE house(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 
 CREATE TABLE appartment(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, floors varchar(255), price varchar(40), garden varchar(40), rooms integer, balcony smallint, builtinKitchen smallint, estate_id int, constraint appartment_constraint foreign key (estate_id) references estate(id) on delete cascade)
 
 
-CREATE TABLE person(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, first_name varchar(255), name varchar(255), address varchar(255))
+CREATE TABLE person(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, first_name varchar(255) not null, name varchar(255) not null, address varchar(255), constraint person_name UNIQUE (first_name, name))
 
 
 CREATE TABLE contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, sign_date date, place_id varchar(255))
