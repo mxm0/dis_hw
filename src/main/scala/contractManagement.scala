@@ -1,4 +1,5 @@
 package db2
+import java.sql.{ResultSet, SQLException}
 
 object contractManagement {
   var input = 0
@@ -22,9 +23,17 @@ object contractManagement {
             p.save()
             msg = "Person added"
           }
-        case 2 => println("Create contract")
+        case 2 =>
+          // get input for contracts
+          contractHelper.createContract()
         case 3 => 
-
+          print("CONTRACTS OVERVIEW\n")
+          contractHelper.showSellContracts()
+          contractHelper.showRentContracts()
+          var in = ""
+          while(!in.equalsIgnoreCase("q")){
+            in = readLine("Enter 'q/Q' to go back: ")
+          }
         case 4 => print("\033[H\033[2J")
         case whoa =>
           print("\033[H\033[2J")
@@ -39,15 +48,6 @@ object contractManagement {
        false
      else
        true
-  }
-
-
-  def createContract() = {
-  }
-
-  def showContracts() = {
-  // SELECT * FROM CONTRACT TABLE
-  // Print selected table
   }
 
   def showOptions() = {
