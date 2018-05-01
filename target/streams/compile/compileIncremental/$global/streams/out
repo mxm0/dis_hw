@@ -1,1 +1,60 @@
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/PurchaseContract.scala, /Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/TenancyContract.scala, /Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/Contract.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/PurchaseContract.scala, /Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/TenancyContract.scala, /Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/Contract.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 3 Scala sources to /Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 45de0b0a for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/classes:/Users/maxinn/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/maxinn/Projects/scala_pr/dis_hw/target/scala-2.12/classes:/Users/maxinn/Projects/scala_pr/dis_hw/lib/db2jcc.jar:/Users/maxinn/Projects/scala_pr/dis_hw/lib/db2jcc_license_cu.jar:/Users/maxinn/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.1.jar:/Users/maxinn/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.1.jar:/Users/maxinn/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar:/Users/maxinn/.sbt/boot/scala-2.12.4/lib/scala-reflect.jar:/Users/maxinn/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.1.jar:/Users/maxinn/.ivy2/cache/com.github.t3hnar/scala-bcrypt_2.12/jars/scala-bcrypt_2.12-3.1.jar:/Users/maxinn/.ivy2/cache/de.svenkubiak/jBCrypt/bundles/jBCrypt-0.4.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 1.946289552 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from db2.PurchaseContract...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(db2.PurchaseContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(db2.PurchaseContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(db2.PurchaseContract,ModifiedNames(changes = UsedName(asInstanceOf,[Default]), UsedName(installment,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(contract_id,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(interest_rate,[Default]), UsedName(==,[Default]), UsedName(PurchaseContract,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]), UsedName(db2;PurchaseContract;init;,[Default]))) invalidates 1 classes due to The db2.PurchaseContract has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(asInstanceOf,[Default]), UsedName(installment,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(contract_id,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(interest_rate,[Default]), UsedName(==,[Default]), UsedName(PurchaseContract,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]), UsedName(db2;PurchaseContract;init;,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(db2.PurchaseContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from db2.TenancyContract...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(db2.TenancyContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(db2.TenancyContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(db2.TenancyContract,ModifiedNames(changes = UsedName(TenancyContract,[Default]), UsedName(contratc_id,[Default]), UsedName(db2;TenancyContract;init;,[Default]), UsedName(asInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(duration,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(additional_costs,[Default]), UsedName(==,[Default]), UsedName(start_date,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]))) invalidates 1 classes due to The db2.TenancyContract has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(TenancyContract,[Default]), UsedName(contratc_id,[Default]), UsedName(db2;TenancyContract;init;,[Default]), UsedName(asInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(duration,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(additional_costs,[Default]), UsedName(==,[Default]), UsedName(start_date,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(db2.TenancyContract)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from db2.Contract...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(db2.Contract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(db2.Contract)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(db2.Contract,ModifiedNames(changes = UsedName(place_id,[Default]), UsedName(asInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(Contract,[Default]), UsedName(==,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(date,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]), UsedName(db2;Contract;init;,[Default]))) invalidates 1 classes due to The db2.Contract has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(place_id,[Default]), UsedName(asInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(toString,[Default]), UsedName(##,[Default]), UsedName($isInstanceOf,[Default]), UsedName(eq,[Default]), UsedName(hashCode,[Default]), UsedName(ne,[Default]), UsedName(Contract,[Default]), UsedName(==,[Default]), UsedName($asInstanceOf,[Default]), UsedName(wait,[Default]), UsedName(notify,[Default]), UsedName(isInstanceOf,[Default]), UsedName(date,[Default]), UsedName(finalize,[Default]), UsedName(getClass,[Default]), UsedName(clone,[Default]), UsedName(db2;Contract;init;,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(db2.Contract)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

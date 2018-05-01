@@ -57,3 +57,7 @@ exit
 exit
 ~run
 exit
+import com.github.t3hnar.bcrypt._
+"password".bcrypt
+~run
+exit
