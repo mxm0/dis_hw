@@ -4,7 +4,7 @@
 		module="dis_hw_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20180429043359"
+		publication="20180501130242"
 	>
 		<description>
 		dis_hw
@@ -33,8 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-core_2.12" rev="1.0.1" conf="compile->default(compile)"/>
-		<dependency org="org.scalikejdbc" name="scalikejdbc_2.12" rev="3.2.2" conf="compile->default(compile)"/>
-		<dependency org="com.h2database" name="h2" rev="1.4.197" conf="compile->default(compile)"/>
-		<dependency org="ch.qos.logback" name="logback-classic" rev="1.2.3" conf="compile->default(compile)"/>
+		<dependency org="com.github.t3hnar" name="scala-bcrypt_2.12" rev="3.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

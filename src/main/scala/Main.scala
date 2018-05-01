@@ -1,14 +1,11 @@
-import scalikejdbc._
+package db2
+
+import java.sql.{Connection, ResultSet, SQLException}
 
 object Main extends App {
   var input = 0 
   val pwd = "toor"
   var err = false
-
-  // Try to connect to db2 and keep global connection
-  //
-  println("Connecting to database...")
-  db2_connect()
 
   while(input != 4){
     if(err){
@@ -22,10 +19,10 @@ object Main extends App {
            |1- Manage estate agents
            |2- Manage estates
            |3- Manage contracts
-           |4- Exit""".stripMargin)
+           |4- Quit""".stripMargin)
     
     
-    var arg = scala.io.StdIn.readLine()
+    var arg = readLine()
 
     input = toInt(arg)
  
@@ -40,7 +37,8 @@ object Main extends App {
              print("\033[H\033[2J")
              err = true 
            }
-         case 2 => estateManagement.manageEstates()
+         case 2 => 
+           estateManagement.manageEstates()
          case 3 => contractManagement.manageContracts()
          case 4 => println("Quitting app...")
          case whoa =>  
@@ -57,18 +55,10 @@ object Main extends App {
     }
   }
 
-  def db2_connect() = {
+  def db2_connect(): java.sql.Connection = {
     // initialize JDBC driver & connection pool
     Class.forName("com.ibm.db2.jcc.DB2Driver")
-    ConnectionPool.singleton("jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP", "vsisp01", "aqMRJ4VO")
-    // SELECT TEST 
-    DB autoCommit { implicit session =>
-    sql"select * from estate_agent".foreach { rs =>
-      println("Emp("+rs.int("id")+","+rs.string("name")+")")
-      }
-    }
-    
-    // ad-hoc session provider on the RE
-    implicit val session = AutoSession    
+      var connection = java.sql.DriverManager.getConnection("jdbc:db2://localhost:50000/VSISP", "vsisp", "") 
+      connection
   }
 }

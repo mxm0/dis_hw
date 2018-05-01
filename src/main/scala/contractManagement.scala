@@ -1,5 +1,8 @@
+package db2
+
 object contractManagement {
   var input = 0
+  var msg = ""
 
   def manageContracts() = {
 
@@ -10,9 +13,18 @@ object contractManagement {
       input = Main.toInt(arg)
 
       input match {
-        case 1 => println("Insert person")
+        case 1 =>
+          var first_name = readLine("Insert first name: ")
+          var name = readLine("Insert name: ")
+          val address = readLine("Insert address: ")
+          if(validatePersonInput(first_name, name, address)){
+            var p = new Person(first_name, name, address)
+            p.save()
+            msg = "Person added"
+          }
         case 2 => println("Create contract")
-        case 3 => println("Show contracts")
+        case 3 => 
+
         case 4 => print("\033[H\033[2J")
         case whoa =>
           print("\033[H\033[2J")
@@ -21,9 +33,14 @@ object contractManagement {
     }
   }
 
-  def insertPerson(name: String, surname: String, address: String) = {
-  // Connect to database
+   def validatePersonInput(first_name: String, name: String, address: String): Boolean = {
+     if(!first_name.matches("^[a-zA-Z]{1,255}$") || !name.matches("^[a-zA-Z]{1,255}$") ||
+         !address.matches("^[a-zA-Z0-9]{1,255}$"))
+       false
+     else
+       true
   }
+
 
   def createContract() = {
   }
@@ -42,5 +59,7 @@ object contractManagement {
             |2- Create contract 
             |3- Show contracts
             |4- Exit""".stripMargin)
+    if(!msg.isEmpty)
+      println("\n" + msg + "\n")
   }
 }

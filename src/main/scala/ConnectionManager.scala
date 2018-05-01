@@ -5,9 +5,9 @@ import java.sql.{ResultSet, DriverManager, Statement}
 class ConnectionManager {
 
   // these should live in a config file, oh well
-  private val url : String  = "jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP"
-  private val user : String  = "vsisp01"
-  private val pw : String = "aqMRJ4VO"
+  private val url : String  = "jdbc:db2://localhost:50000/VSISP"
+  private val user : String  = "maxinn"
+  private val pw : String = "qw4vMkQ:)wDL6pKq"
 
   // initialize JDBC driver & connection pool
   Class.forName("com.ibm.db2.jcc.DB2Driver")
