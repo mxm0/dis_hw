@@ -24,13 +24,13 @@ CREATE TABLE appartment(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START 
 CREATE TABLE person(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, first_name varchar(255), name varchar(255), address varchar(255))
 
 
-CREATE TABLE contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, date varchar(255), place_id varchar(255))
+CREATE TABLE contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, sign_date date, place_id varchar(255))
 
 
-CREATE TABLE purchase_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, installment varchar(255), intetrest_rate varchar(255), contract_id int, constraint purchase_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
+CREATE TABLE purchase_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, installment INTEGER, interest_rate varchar(255), contract_id int, constraint purchase_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
 
 
-CREATE TABLE tenancy_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, start_date date, duration varchar(8),additional_costs varchar(8),contract_id int, constraint tenancy_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
+CREATE TABLE tenancy_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, start_date date, duration varchar(40),additional_costs varchar(40),contract_id int, constraint tenancy_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
 
 
 CREATE TABLE manages(PRIMARY KEY(estate_agent_id,estate_id), estate_agent_id int not null, estate_id int not null, constraint estate_agent_id_constraint foreign key (estate_agent_id) references estate_agent(id) on delete cascade, constraint estate_id_constraint foreign key (estate_id) references estate(id) on delete cascade, constraint uniquename unique (estate_id))
