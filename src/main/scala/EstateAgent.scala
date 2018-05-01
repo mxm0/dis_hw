@@ -3,7 +3,7 @@ package db2
 import java.sql.{ResultSet, SQLException}
 import com.github.t3hnar.bcrypt._
 
-class EstateAgent (var Name: String, var Address: String, var Login: String, var Pwd: String) {
+class EstateAgent (var Id: Int, var Name: String, var Address: String, var Login: String, var Pwd: String) {
 
   def createAccount() = {
     val hashedPwd = Pwd.bcrypt(generateSalt) // encrypt pwd

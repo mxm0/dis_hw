@@ -18,7 +18,7 @@ object contractManagement {
           var name = readLine("Insert name: ")
           val address = readLine("Insert address: ")
           if(validatePersonInput(first_name, name, address)){
-            var p = new Person(first_name, name, address)
+            var p = new Person(0, first_name, name, address)
             p.save()
             msg = "Person added"
           }

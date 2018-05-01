@@ -24,7 +24,7 @@ object agentManagement {
           println("Insert password: ")
           val pwd_in = standardIn.readPassword()
           if(validateInput(name, address, login, pwd_in.mkString)){
-            var estateAgent = new EstateAgent(name, address, login, pwd_in.mkString)
+            var estateAgent = new EstateAgent(0, name, address, login, pwd_in.mkString)
             estateAgent.createAccount()
             msg = "Account created"
           }else{
@@ -37,7 +37,7 @@ object agentManagement {
 
         case 3 =>
           val login = readLine("Insert login username: ")
-          var estateAgent = new EstateAgent("", "", login, "")
+          var estateAgent = new EstateAgent(0, "", "", login, "")
           estateAgent.delete()
           msg = "Account deleted"
         
@@ -51,7 +51,7 @@ object agentManagement {
   }
 
   def editAccount(login: String) = {
-   var estateAgent = new EstateAgent("", "", login, "")
+   var estateAgent = new EstateAgent(0, "", "", login, "")
    estateAgent = estateAgent.pullAccount()
    if(!estateAgent.Name.isEmpty){
      var input = 0  

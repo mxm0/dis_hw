@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/maxinn/Projects/scala_pr/dis_hw/src/main/scala/Contract.scala:5:24: identifier expected but '=' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  def pullContracts(): = {[0m
-[0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 41 deprecation warnings (since 2.11.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
