@@ -27,7 +27,7 @@ CREATE TABLE person(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH
 CREATE TABLE contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, date varchar(255), place_id varchar(255))
 
 
-CREATE TABLE purchase_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, installment varchar(255), intetrest_rate varchar(255), contract_id int, constraint purchase_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
+CREATE TABLE purchase_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, installment varchar(255), interest_rate varchar(255), contract_id int, constraint purchase_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
 
 
 CREATE TABLE tenancy_contract(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY, start_date date, duration varchar(8),additional_costs varchar(8),contract_id int, constraint tenancy_contract_constraint foreign key (contract_id) references contract(id) on delete cascade)
