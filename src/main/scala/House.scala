@@ -5,34 +5,31 @@ import db2.ConnectionManager
 
 class House {
 
-
   private var _id = -1
   private var _estate_id = -1
   private var _floors: String = _
   private var _price: String = _
   private var _garden: String = _
 
+  def id = _estate_id
   def estate_id = _estate_id
   def floors = _floors
   def price = _price
   def garden = _garden
 
+  def id_= (value:Int):Unit = _id = value
   def estate_id_= (value:Int):Unit = _estate_id = value
   def floors_= (value:String):Unit = _floors = value
   def price_= (value:String):Unit = _price = value
   def garden_= (value:String):Unit = _garden = value
 
-  /*
-  CREATE TABLE house(id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY
-  (START WITH 1, INCREMENT BY 1, NO CACHE) PRIMARY KEY,
-  floors varchar(255), price varchar(40), garden varchar(40), estate_id int,
-  constraint house_constraint foreign key (estate_id) references estate(id) on delete cascade)
-   */
+  override def toString: String = s"House(id=${_id}, estate_id=${_estate_id}, floors=${_floors}," +
+                                         s"price=${_price}, garden=${_garden})"
 
   def load(id: Int): House = {
     try {
       val db2 = new ConnectionManager
-      val stmt = db2.conn.prepareStatement("select * from appartment where id = ?")
+      val stmt = db2.conn.prepareStatement("select * from house where id = ?")
       stmt.setInt(1, id)
       val apt_res = stmt.executeQuery
       if (apt_res.next) {
