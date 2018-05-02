@@ -1,7 +1,6 @@
 package db2
 
 import java.sql.SQLException
-
 import com.github.t3hnar.bcrypt._
 
 class EstateAgent (var Id: Int = 0, var Name: String = "", var Address: String = "",

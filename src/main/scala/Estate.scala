@@ -29,7 +29,6 @@ class Estate {
                                           s"street=${_street}, street_number=${_street_number}, " +
                                           s"square_area=${_square_area})"
 
-
   def load(id: Int): Estate = {
     try {
       val db2 = new ConnectionManager
@@ -54,8 +53,20 @@ class Estate {
     }
     null
   }
+  def delete(): Unit = {
+    try {
+      val db2 = new ConnectionManager
+      val pstmt = db2.conn.prepareStatement("DELETE FROM estate WHERE id = ?")
+      pstmt.setInt(1, _id)
+      pstmt.executeUpdate
+    }
+    catch {
+      case e: SQLException =>
+        e.printStackTrace()
+    }
+  }
 
-  def save(): Unit = {
+def save(): Unit = {
     try {
       val db2 = new ConnectionManager
       if (_id == -1) {

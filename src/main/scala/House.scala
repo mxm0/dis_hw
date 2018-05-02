@@ -1,7 +1,6 @@
-package model
+package db2
 
 import java.sql.{SQLException, Statement}
-import db2.ConnectionManager
 
 class House {
 

@@ -1,6 +1,5 @@
-package model
+package db2
 
-import db2.ConnectionManager
 import java.sql.{SQLException, Statement}
 
 class Apartment {
