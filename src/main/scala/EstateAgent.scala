@@ -1,9 +1,15 @@
 package db2
 
-import java.sql.{ResultSet, SQLException}
+import java.sql.SQLException
+
 import com.github.t3hnar.bcrypt._
 
-class EstateAgent (var Id: Int, var Name: String, var Address: String, var Login: String, var Pwd: String) {
+class EstateAgent (var Id: Int = 0, var Name: String = "", var Address: String = "",
+                   var Login: String = "", var Pwd: String = "") {
+
+  override def toString: String = s"EstateAgent(id=$Id, name=$Name, Address=$Address," +
+    s"Login=$Login, Pwd=$Pwd)"
+
 
   def createAccount() = {
     val hashedPwd = Pwd.bcrypt(generateSalt) // encrypt pwd
@@ -65,13 +71,15 @@ class EstateAgent (var Id: Int, var Name: String, var Address: String, var Login
   def pullAccount(): EstateAgent = {
     val db2 = new ConnectionManager()
     try{
-      var pst = db2.conn.prepareStatement("select name, address, login from estate_agent where login = ?")
+      var pst = db2.conn.prepareStatement("select name, address, login, password, id from estate_agent where login = ?")
       pst.setString (1, Login)
       var rs = pst.executeQuery()
       if(rs.next()){
         Name = rs.getString(1)
         Address = rs.getString(2)
         Login = rs.getString(3)
+        Pwd = rs.getString(4)
+        Id = rs.getInt(5)
       }
         pst.close()
     } catch {
